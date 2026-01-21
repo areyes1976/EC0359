@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diagnóstico EC0359 — Consultoría a PyME</title>
+  <style>
+    :root { font-family: Arial, Helvetica, sans-serif; line-height: 1.35; }
+    body { margin: 0; background: #f6f7f9; }
+    header { background: #0b2a4a; color: #fff; padding: 18px 16px; }
+    main { max-width: 980px; margin: 0 auto; padding: 18px 16px 40px; }
+    .card { background: #fff; border-radius: 10px; padding: 16px; margin: 12px 0; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+    h1 { font-size: 18px; margin: 0 0 6px; }
+    h2 { font-size: 16px; margin: 0 0 10px; }
+    .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    label { display: block; margin: 8px 0 4px; font-weight: 600; }
+    input[type="text"], input[type="date"] { width: 100%; padding: 10px; border: 1px solid #cfd6df; border-radius: 8px; }
+    .opt { margin: 6px 0; font-weight: 400; }
+    .opt input { transform: translateY(1px); }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .actions { display:flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 12px; }
+    button { padding: 10px 14px; border: 0; border-radius: 10px; cursor: pointer; font-weight: 700; }
+    .primary { background:#0b2a4a; color:#fff; }
+    .secondary { background:#e9eef5; }
+    .note { font-size: 12px; color:#4b5563; }
+    .result { font-size: 14px; }
+    details { margin-top: 8px; }
+    summary { cursor: pointer; font-weight: 700; }
+    .answerKey { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; white-space: pre-wrap; background:#f3f4f6; padding: 10px; border-radius: 8px; }
+    .divider { height: 1px; background: #e5e7eb; margin: 12px 0; }
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>Diagnóstico — EC0359 Proporcionar servicios de consultoría a PyME´s</h1>
+  <div class="note">Instrucciones: Subraya/selecciona las respuestas correctas. Algunos reactivos requieren seleccionar más de una opción.</div>
+</header>
+
+<main>
+  <div class="card">
+    <h2>Datos del participante</h2>
+    <div class="meta">
+      <div>
+        <label for="candidato">Nombre</label>
+        <input id="candidato" type="text" placeholder="Nombre del candidato/a" />
+      </div>
+      <div>
+        <label for="fecha">Fecha de aplicación</label>
+        <input id="fecha" type="date" />
+      </div>
+    </div>
+    <div class="note" style="margin-top:10px;">
+      Publica este archivo en una URL pública y genera un QR con esa liga.
+    </div>
+  </div>
+
+  <form id="quiz">
+
+    <!-- 1 -->
+    <div class="card">
+      <h2>1) En la reunión inicial con el consultante, la persona es competente cuando:</h2>
+      <div class="opt"><label><input type="checkbox" name="q1" value="a"> Recaba toda la documentación personal del consultante.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q1" value="b"> Acuerda fechas de futuras reuniones.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q1" value="c"> Resuelve las dudas del consultante.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q1" value="d"> Presenta una breve reseña de su experiencia y servicios que puede prestar, aclara las dudas del consultante y menciona los acuerdos y compromisos contraídos.</label></div>
+    </div>
+
+    <!-- 2 -->
+    <div class="card">
+      <h2>2) El documento con la información recabada en la reunión inicial debe contener los siguientes aspectos:</h2>
+      <div class="opt"><label><input type="checkbox" name="q2" value="a"> Incluye la descripción de las etapas para obtener el diagnóstico.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q2" value="b"> Incluye los acuerdos alcanzados durante la presentación de la propuesta.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q2" value="c"> Menciona la antigüedad de la organización consultante.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q2" value="d"> Incluye las inquietudes generales del contratante.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q2" value="e"> Ninguna de las anteriores.</label></div>
+    </div>
+
+    <!-- 3 -->
+    <div class="card">
+      <h2>3) Las etapas que integran el Elemento 1: Acordar el servicio de consultoría a proporcionar, son:</h2>
+      <div class="opt"><label><input type="checkbox" name="q3" value="a"> Reunión inicial, propuesta de elaboración del diagnóstico, aceptación de la elaboración del diagnóstico.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q3" value="b"> Diagnóstico, FODA, conclusiones.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q3" value="c"> Diagnóstico, propuesta de mejora y puesta en marcha.</label></div>
+    </div>
+
+    <!-- 4 -->
+    <div class="card">
+      <h2>4) Un consultor es:</h2>
+      <div class="opt"><label><input type="checkbox" name="q4" value="a"> Un asesor de la empresa.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q4" value="b"> La persona con más antigüedad trabajando en la empresa.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q4" value="c"> Una persona externa contratada para auxiliar en algún área estratégica de la empresa.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q4" value="d"> Profesionista independiente que transfiere conocimientos, metodologías y aplicaciones, con la finalidad de mejorar los procesos de la empresa consultante.</label></div>
+    </div>
+
+    <!-- 5 -->
+    <div class="card">
+      <h2>5) La propuesta elaborada para llevar a cabo el diagnóstico incluye:</h2>
+      <div class="opt"><label><input type="checkbox" name="q5" value="a"> Incluye el alcance del diagnóstico.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q5" value="b"> Incluye un programa de trabajo para realizar el diagnóstico.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q5" value="c"> Incluye la cotización del diagnóstico.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q5" value="d"> Todas las anteriores.</label></div>
+    </div>
+
+    <!-- 6 -->
+    <div class="card">
+      <h2>6) El documento que formaliza la aceptación de la elaboración del diagnóstico incluye:</h2>
+      <div class="opt"><label><input type="checkbox" name="q6" value="a"> Descripción de las etapas para obtener el diagnóstico.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q6" value="b"> Actividades a desarrollar durante el diagnóstico.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q6" value="c"> Costo del servicio a prestar.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q6" value="d"> Alcance del servicio.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q6" value="e"> Tiempo esperado de ejecución.</label></div>
+    </div>
+
+    <!-- 7 -->
+    <div class="card">
+      <h2>7) El reporte de diagnóstico debe incluir los diagnósticos de las 5 áreas principales:</h2>
+      <div class="opt"><label><input type="checkbox" name="q7" value="a"> Administración, Operaciones, Ventas y Mercadotecnia, Recursos Humanos y Finanzas.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q7" value="b"> Producción, Contabilidad, Administración, Mercadotecnia, Administración Financiera.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q7" value="c"> Atención a clientes, Ventas y Mercadotecnia, Administración, Contabilidad y Recursos Humanos.</label></div>
+    </div>
+
+    <!-- 8 -->
+    <div class="card">
+      <h2>8) El diagnóstico del área de administración debe incluir información acerca de los siguientes elementos:</h2>
+      <div class="opt"><label><input type="checkbox" name="q8" value="a"> Existencia de un plan de negocios.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q8" value="b"> Existencia del organigrama de la empresa.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q8" value="c"> Los puntos críticos identificados en el área de Administración.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q8" value="d"> Referencias sobre la existencia y difusión de misión y visión.</label></div>
+    </div>
+
+    <!-- 9 -->
+    <div class="card">
+      <h2>9) Los diagnósticos de todas las áreas deben incluir información sobre el uso de tecnologías de información en las operaciones de las mismas.</h2>
+      <div class="opt"><label><input type="radio" name="q9" value="V"> Verdadero</label></div>
+      <div class="opt"><label><input type="radio" name="q9" value="F"> Falso</label></div>
+    </div>
+
+    <!-- 10 -->
+    <div class="card">
+      <h2>10) La información acerca del costo y manejo de los inventarios se debe incluir en el diagnóstico del área de:</h2>
+      <div class="opt"><label><input type="checkbox" name="q10" value="a"> Finanzas.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q10" value="b"> Contabilidad.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q10" value="c"> Operaciones.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q10" value="d"> Administración.</label></div>
+    </div>
+
+    <!-- 11 -->
+    <div class="card">
+      <h2>11) El reporte FODA debe incluir:</h2>
+      <div class="opt"><label><input type="checkbox" name="q11" value="a"> Fortalezas, debilidades, oportunidades y amenazas.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q11" value="b"> El análisis de fortalezas, debilidades, oportunidades y amenazas de todas las áreas de la empresa.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q11" value="c"> El diagnóstico de fortalezas, oportunidades, debilidades y amenazas.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q11" value="d"> El análisis FODA del área de administración.</label></div>
+    </div>
+
+    <!-- 12 -->
+    <div class="card">
+      <h2>12) Subrayar los elementos que no sean parte del diagnóstico de mercadotecnia:</h2>
+      <div class="opt"><label><input type="checkbox" name="q12" value="a"> Información acerca de los mercados que atiende la empresa.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q12" value="b"> Información sobre el conocimiento de la competencia.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q12" value="c"> Información sobre la publicidad de los productos de la empresa.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q12" value="d"> Información acerca del grado de satisfacción e insatisfacción de los clientes.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q12" value="e"> Acciones que toma la empresa para realizar ventas.</label></div>
+    </div>
+
+    <!-- 13 -->
+    <div class="card">
+      <h2>13) La información referente a indicadores de liquidez, apalancamiento y rentabilidad y la información de estados financieros debe proporcionarse en el diagnóstico de:</h2>
+      <div class="opt"><label><input type="checkbox" name="q13" value="a"> Contabilidad.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q13" value="b"> Finanzas.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q13" value="c"> Ventas.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q13" value="d"> Administración.</label></div>
+    </div>
+
+    <!-- 14 -->
+    <div class="card">
+      <h2>14) Las conclusiones generales sobre la organización en el reporte de diagnóstico deben:</h2>
+      <div class="opt"><label><input type="checkbox" name="q14" value="a"> Explicarse claramente.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q14" value="b"> Sustentarse en evidencias recopiladas en el proceso.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q14" value="c"> Mencionar el origen y efecto de los problemas detectados.</label></div>
+      <div class="opt"><label><input type="checkbox" name="q14" value="d"> Mencionar origen y efecto e incluir sustento con evidencias recopiladas.</label></div>
+    </div>
+
+    <!-- 15 -->
+    <div class="card">
+      <h2>15) Una propuesta de sistema de mejora de la problemática de una organización debe incluir, escriba verdadero (V) o falso (F):</h2>
+      <div class="grid2">
+        <div>
+          <label>Áreas de oportunidad detectadas</label>
+          <label class="opt"><input type="radio" name="q15a" value="V"> V</label>
+          <label class="opt"><input type="radio" name="q15a" value="F"> F</label>
+        </div>
+        <div>
+          <label>Resultados y beneficios esperados</label>
+          <label class="opt"><input type="radio" name="q15b" value="V"> V</label>
+          <label class="opt"><input type="radio" name="q15b" value="F"> F</label>
+        </div>
+        <div>
+          <label>Créditos de la banca comercial</label>
+          <label class="opt"><input type="radio" name="q15c" value="V"> V</label>
+          <label class="opt"><input type="radio" name="q15c" value="F"> F</label>
+        </div>
+        <div>
+          <label>Consecuencias de la implementación de soluciones</label>
+          <label class="opt"><input type="radio" name="q15d" value="V"> V</label>
+          <label class="opt"><input type="radio" name="q15d" value="F"> F</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 -->
+    <div class="card">
+      <h2>16) ¿Cuál de las siguientes fuentes de dinero es la más recomendable mencionar en la propuesta de un sistema de mejora (marque con una “X”)?</h2>
+      <div class="opt"><label><input type="radio" name="q16" value="a"> Apoyo gubernamental</label></div>
+      <div class="opt"><label><input type="radio" name="q16" value="b"> Crédito de la banca comercial</label></div>
+      <div class="opt"><label><input type="radio" name="q16" value="c"> Aportación de los socios</label></div>
+    </div>
+
+    <!-- 17 -->
+    <div class="card">
+      <h2>17) La propuesta presentada por escrito debe incluir, escriba verdadero (V) o falso (F):</h2>
+      <div class="grid2">
+        <div>
+          <label>Factura de los servicios de consultoría</label>
+          <label class="opt"><input type="radio" name="q17a" value="V"> V</label>
+          <label class="opt"><input type="radio" name="q17a" value="F"> F</label>
+        </div>
+        <div>
+          <label>Responsabilidades del consultor y el cliente</label>
+          <label class="opt"><input type="radio" name="q17b" value="V"> V</label>
+          <label class="opt"><input type="radio" name="q17b" value="F"> F</label>
+        </div>
+        <div>
+          <label>Costos y beneficios de la implementación</label>
+          <label class="opt"><input type="radio" name="q17c" value="V"> V</label>
+          <label class="opt"><input type="radio" name="q17c" value="F"> F</label>
+        </div>
+        <div>
+          <label>Etapas de la implementación</label>
+          <label class="opt"><input type="radio" name="q17d" value="V"> V</label>
+          <label class="opt"><input type="radio" name="q17d" value="F"> F</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 18 -->
+    <div class="card">
+      <h2>18) Favor de responder si es verdadero (V) o falso (F):</h2>
+      <div class="grid2">
+        <div>
+          <label>La propuesta debe mencionar los recursos de la organización</label>
+          <label class="opt"><input type="radio" name="q18a" value="V"> V</label>
+          <label class="opt"><input type="radio" name="q18a" value="F"> F</label>
+        </div>
+        <div>
+          <label>La propuesta debe mencionar los recursos del consultor</label>
+          <label class="opt"><input type="radio" name="q18b" value="V"> V</label>
+          <label class="opt"><input type="radio" name="q18b" value="F"> F</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 19 -->
+    <div class="card">
+      <h2>19) Mencione si es verdadero (V), o falso (F):</h2>
+      <div class="grid2">
+        <div>
+          <label>La propuesta de mejora debe mencionar los resultados esperados por etapa</label>
+          <label class="opt"><input type="radio" name="q19a" value="V"> V</label>
+          <label class="opt"><input type="radio" name="q19a" value="F"> F</label>
+        </div>
+        <div>
+          <label>La propuesta de mejora no incluye mecanismos de control</label>
+          <label class="opt"><input type="radio" name="q19b" value="V"> V</label>
+          <label class="opt"><input type="radio" name="q19b" value="F"> F</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 20 -->
+    <div class="card">
+      <h2>20) En el elemento costos de la propuesta se deben mencionar, marque con una “x”:</h2>
+      <div class="opt"><label><input type="checkbox" name="q20" value="a"> Viáticos</label></div>
+      <div class="opt"><label><input type="checkbox" name="q20" value="b"> Honorarios del consultor</label></div>
+      <div class="opt"><label><input type="checkbox" name="q20" value="c"> Condiciones de pago</label></div>
+      <div class="opt"><label><input type="checkbox" name="q20" value="d"> Datos bancarios</label></div>
+    </div>
+
+    <!-- 21 -->
+    <div class="card">
+      <h2>21) La propuesta de mejora requiere el registro de los acuerdos alcanzados.</h2>
+      <div class="opt"><label><input type="radio" name="q21" value="V"> Verdadero</label></div>
+      <div class="opt"><label><input type="radio" name="q21" value="F"> Falso</label></div>
+    </div>
+
+    <!-- 22 -->
+    <div class="card">
+      <h2>22) En caso de que la respuesta anterior haya sido verdadera, seleccione los elementos que debe contener el registro (marque con una “x”):</h2>
+      <div class="opt"><label><input type="checkbox" name="q22" value="a"> Resultados esperados</label></div>
+      <div class="opt"><label><input type="checkbox" name="q22" value="b"> Descripción del servicio</label></div>
+      <div class="opt"><label><input type="checkbox" name="q22" value="c"> Tiempo esperado de implantación</label></div>
+      <div class="opt"><label><input type="checkbox" name="q22" value="d"> Roles y responsabilidades de los participantes</label></div>
+      <div class="opt"><label><input type="checkbox" name="q22" value="e"> Costo y condiciones de pago</label></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 23 -->
+    <div class="card">
+      <h2>23) El plan de implantación no debe incluir los resultados esperados.</h2>
+      <div class="opt"><label><input type="radio" name="q23" value="V"> Verdadero</label></div>
+      <div class="opt"><label><input type="radio" name="q23" value="F"> Falso</label></div>
+    </div>
+
+    <!-- 24 -->
+    <div class="card">
+      <h2>24) El plan de implantación debe incluir los actividades, mecanismos y recursos que se deben utilizar.</h2>
+      <div class="opt"><label><input type="radio" name="q24" value="V"> Verdadero</label></div>
+      <div class="opt"><label><input type="radio" name="q24" value="F"> Falso</label></div>
+    </div>
+
+    <!-- 25 -->
+    <div class="card">
+      <h2>25) El plan de implantación debe mencionar los nombres y cargos de las personas que pueden realizar modificaciones al plan.</h2>
+      <div class="opt"><label><input type="radio" name="q25" value="V"> Verdadero</label></div>
+      <div class="opt"><label><input type="radio" name="q25" value="F"> Falso</label></div>
+    </div>
+
+    <!-- 26 -->
+    <div class="card">
+      <h2>26) Marque con una “X” las características de las actividades a realizar del plan de implantación:</h2>
+      <div class="opt"><label><input type="checkbox" name="q26" value="a"> a) Estar marcadas en un calendario</label></div>
+      <div class="opt"><label><input type="checkbox" name="q26" value="b"> b) Mencionar el recurso financiero que requieren</label></div>
+      <div class="opt"><label><input type="checkbox" name="q26" value="c"> c) Señalar al responsable de cada una de ellas</label></div>
+      <div class="opt"><label><input type="checkbox" name="q26" value="d"> d) Mencionar la capacitación al personal que participa</label></div>
+      <div class="opt"><label><input type="checkbox" name="q26" value="e"> e) Señalar alternativas en caso de ser pospuestas</label></div>
+    </div>
+
+    <!-- 27 -->
+    <div class="card">
+      <h2>27) Marque con una “X” los recursos que se deben mencionar en el plan de implantación:</h2>
+      <div class="opt"><label><input type="checkbox" name="q27" value="a"> a) Los recursos físicos</label></div>
+      <div class="opt"><label><input type="checkbox" name="q27" value="b"> b) Los recursos financieros</label></div>
+      <div class="opt"><label><input type="checkbox" name="q27" value="c"> c) El capital intelectual</label></div>
+      <div class="opt"><label><input type="checkbox" name="q27" value="d"> d) El capital humano</label></div>
+      <div class="opt"><label><input type="checkbox" name="q27" value="e"> e) El capital industrial</label></div>
+    </div>
+
+    <!-- 28 -->
+    <div class="card">
+      <h2>28) Mencionar 2 características que debe tener el comunicado para los participantes de la implantación:</h2>
+      <label>Característica 1</label>
+      <input type="text" name="q28a" placeholder="Escribe la característica 1" />
+      <label>Característica 2</label>
+      <input type="text" name="q28b" placeholder="Escribe la característica 2" />
+    </div>
+
+    <!-- 29 -->
+    <div class="card">
+      <h2>29) En el avance de la implantación solamente se deben mencionar las fechas del periodo, las actividades realizadas y el resultado esperado y alcanzado.</h2>
+      <div class="opt"><label><input type="radio" name="q29" value="V"> Verdadero</label></div>
+      <div class="opt"><label><input type="radio" name="q29" value="F"> Falso</label></div>
+    </div>
+
+    <!-- 30 -->
+    <div class="card">
+      <h2>30) En el avance de la implantación no es necesario mencionar las decisiones sobre las desviaciones detectadas.</h2>
+      <div class="opt"><label><input type="radio" name="q30" value="V"> Verdadero</label></div>
+      <div class="opt"><label><input type="radio" name="q30" value="F"> Falso</label></div>
+    </div>
+
+    <div class="card">
+      <div class="actions">
+        <button class="primary" type="button" onclick="grade()">Calificar (23–30)</button>
+        <button class="secondary" type="reset" onclick="resetResult()">Reiniciar</button>
+        <label class="opt" style="margin:0;">
+          <input type="checkbox" id="teacherMode" onchange="toggleTeacher()"> Modo docente (mostrar clave 23–30)
+        </label>
+      </div>
+      <div id="out" class="result" style="margin-top:10px;"></div>
+
+      <details id="keyPanel" style="display:none;">
+        <summary>Clave (modo docente)</summary>
+        <div class="answerKey" id="answerKey"></div>
+      </details>
+
+      <div class="note" style="margin-top:10px;">
+        Por integridad metodológica: este HTML solo califica automáticamente 23–30 (porque ahí la clave está explícita en el instrumento).
+      </div>
+    </div>
+
+  </form>
+</main>
+
+<script>
+  // Clave explícita del instrumento (23–30)
+  const KEY = {
+    q23: "F",
+    q24: "V",
+    q25: "V",
+    q26: ["a","c","d"],
+    q27: ["a","b","d"],
+    q28_keywords: {
+      responsibilities: ["responsabil"],     // responsabilidades / responsable
+      time: ["tiempo","fecha"]               // tiempo / fecha
+    },
+    q29: "F",
+    q30: "F"
+  };
+
+  function getCheckedValues(name){
+    return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(x=>x.value);
+  }
+  function getRadioValue(name){
+    const el = document.querySelector(`input[name="${name}"]:checked`);
+    return el ? el.value : null;
+  }
+  function normalize(s){
+    return (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+  }
+
+  // Multi select estricto: exactamente las correctas (sin extras y sin faltantes)
+  function scoreMultiStrict(name, correctArr){
+    const chosen = new Set(getCheckedValues(name));
+    const correct = new Set(correctArr);
+    for (const v of chosen) if (!correct.has(v)) return 0;
+    for (const v of correct) if (!chosen.has(v)) return 0;
+    return 1;
+  }
+
+  function scoreSingleVF(name, correct){
+    const v = getRadioValue(name);
+    if (v === null) return 0;
+    return (v === correct) ? 1 : 0;
+  }
+
+  // Abierta: 2 características (responsabilidades + tiempo/fecha)
+  function scoreOpen28(){
+    const a = normalize(document.querySelector('input[name="q28a"]').value);
+    const b = normalize(document.querySelector('input[name="q28b"]').value);
+
+    const hasResp = KEY.q28_keywords.responsibilities.some(k => a.includes(k) || b.includes(k));
+    const hasTime = KEY.q28_keywords.time.some(k => a.includes(k) || b.includes(k));
+
+    return (hasResp && hasTime) ? 1 : 0;
+  }
+
+  function grade(){
+    const scores = [];
+    scores.push(scoreSingleVF("q23", KEY.q23));
+    scores.push(scoreSingleVF("q24", KEY.q24));
+    scores.push(scoreSingleVF("q25", KEY.q25));
+    scores.push(scoreMultiStrict("q26", KEY.q26));
+    scores.push(scoreMultiStrict("q27", KEY.q27));
+    scores.push(scoreOpen28());
+    scores.push(scoreSingleVF("q29", KEY.q29));
+    scores.push(scoreSingleVF("q30", KEY.q30));
+
+    const total = scores.reduce((a,b)=>a+b,0);
+    const max = scores.length;
+
+    const nombre = document.getElementById("candidato").value || "Participante";
+    document.getElementById("out").innerHTML =
+      `<div><strong>${nombre}</strong></div>
+       <div>Puntaje (23–30): <strong>${total.toFixed(2)}</strong> / ${max}</div>`;
+  }
+
+  function resetResult(){
+    document.getElementById("out").innerHTML = "";
+  }
+
+  function toggleTeacher(){
+    const on = document.getElementById("teacherMode").checked;
+    const panel = document.getElementById("keyPanel");
+    if(!on){
+      panel.style.display = "none";
+      return;
+    }
+    const pass = prompt("Clave de modo docente:");
+    if(pass !== "EC0359"){
+      alert("Clave incorrecta.");
+      document.getElementById("teacherMode").checked = false;
+      panel.style.display = "none";
+      return;
+    }
+    panel.style.display = "block";
+
+    document.getElementById("answerKey").textContent =
+`CLAVE 23–30 (según el instrumento)
+23: F
+24: V
+25: V
+26: a, c, d
+27: a, b, d
+28: Responsabilidades + Tiempo/Fecha
+29: F
+30: F`;
+  }
+</script>
+</body>
+</html>
